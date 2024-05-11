@@ -85,7 +85,8 @@ Type ContentType = {
 | `X-Tenant`         | `string`  | `Header` | **Required**. Your Tenant Id       |
 | `PageNumber`       | `integer` | `Params` | **Required**. Page Number          |
 | `PageSize`         | `integer` | `Params` | **Required**. Size of Content List |
-| `CategoryTypeId  ` | `integer` | `Params` | **Required**. Category Type ID     |
+| `CategoryTypeId` | `integer` | `Params` | **Required**. Category Type ID     |
+
 
 | Category Type | ID  |
 | :------------ | :-- |
@@ -95,6 +96,24 @@ Type ContentType = {
 | `Character`   | `4` |
 | `Place`       | `6` |
 | `Year`        | `7` |
+
+<br/>
+
+#### - Response Type:
+
+```javascript
+Type Main = {
+    data:      Data[];
+    paginatin: number;
+    name:      null;
+}
+
+Type Data = {
+    id:       number;
+    text:     string;
+    selected: boolean;
+}
+```
 
 ## - دریافت کد مداحان و سخنرانان
 
@@ -111,11 +130,28 @@ Type ContentType = {
 | `FullName`     | `string`  | `Params` | **Optional**. نام مداح یا سخنران   |
 | `ArtistTypeId` | `number`  | `Params` | **Optional**. آیدی مداح یا سخنران  |
 
+
 | Artist Type | ID  |
 | :---------- | :-- |
 | `مداح`      | `1` |
 | `سخنران`    | `2` |
 | `قاری`      | `3` |
+
+#### - Response Type:
+
+```javascript
+Type Response = {
+  data: Data[];
+  paginatin: number;
+  name: null;
+}
+
+Type Data = {
+  id: number;
+  text: string;
+  selected: boolean;
+}
+```
 
 ## - ثبت محتوا
 
