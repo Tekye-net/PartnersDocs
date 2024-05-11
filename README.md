@@ -105,6 +105,7 @@
 | `artistsId` | `number[]` |  `Body` | آیدی مداح یا سخنران   |
 | `categoriesId` | `number[]` |  `Body` | آیدی دسته بندی   |
 | `eventId` | `number[]` |  `Body` | آیدی مناسبت   |
+| `charactersId` | `number[]` |  `Body` | شخصیت مذهبی مرتبط با محتوا   |
 | `genresId` | `number[]` |  `Body` | آیدی سبک   |
 | `yearId` | `number` |  `Body` | آیدی سال محتوا   |
 | `placeId` | `number` |  `Body` | محل خلق اثر   |
