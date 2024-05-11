@@ -102,7 +102,7 @@ Type ContentType = {
 #### - Response Type:
 
 ```javascript
-Type Main = {
+Type Response = {
     data:      Data[];
     paginatin: number;
     name:      null;
