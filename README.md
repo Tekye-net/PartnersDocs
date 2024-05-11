@@ -24,8 +24,8 @@
 | :----------- | :-------- | :------- | :--------------------------------- |
 | `X-API-KEY`  | `string`  | `Header` | **Required**. Your API key         |
 | `X-Tenant`   | `string`  | `Header` | **Required**. Your Tenant Id       |
-| `PageNumber` | `integer` | `Params` | **Required**. Page Number          |
-| `PageSize`   | `integer` | `Params` | **Required**. Size of Content List |
+| `PageNumber` | `number` | `Params` | **Required**. Page Number          |
+| `PageSize`   | `number` | `Params` | **Required**. Size of Content List |
 | `Title`      | `string`  | `Params` | بخشی از تیتر محتوا                 |
 
 <br/>
@@ -83,9 +83,9 @@ Type ContentType = {
 | :----------------- | :-------- | :------- | :--------------------------------- |
 | `X-API-KEY`        | `string`  | `Header` | **Required**. Your API key         |
 | `X-Tenant`         | `string`  | `Header` | **Required**. Your Tenant Id       |
-| `PageNumber`       | `integer` | `Params` | **Required**. Page Number          |
-| `PageSize`         | `integer` | `Params` | **Required**. Size of Content List |
-| `CategoryTypeId` | `integer` | `Params` | **Required**. Category Type ID     |
+| `PageNumber`       | `number` | `Params` | **Required**. Page Number          |
+| `PageSize`         | `number` | `Params` | **Required**. Size of Content List |
+| `CategoryTypeId` | `number` | `Params` | **Required**. Category Type ID     |
 
 
 | Category Type | ID  |
@@ -125,8 +125,8 @@ Type Data = {
 | :------------- | :-------- | :------- | :--------------------------------- |
 | `X-API-KEY`    | `string`  | `Header` | **Required**. Your API key         |
 | `X-Tenant`     | `string`  | `Header` | **Required**. Your Tenant Id       |
-| `PageNumber`   | `integer` | `Params` | **Required**. Page Number          |
-| `PageSize`     | `integer` | `Params` | **Required**. Size of Content List |
+| `PageNumber`   | `number` | `Params` | **Required**. Page Number          |
+| `PageSize`     | `number` | `Params` | **Required**. Size of Content List |
 | `FullName`     | `string`  | `Params` | **Optional**. نام مداح یا سخنران   |
 | `ArtistTypeId` | `number`  | `Params` | **Optional**. آیدی مداح یا سخنران  |
 
