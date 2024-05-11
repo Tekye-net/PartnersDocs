@@ -27,7 +27,7 @@
 | `X-Tenant` | `string` | `Header` | **Required**. Your Tenant Id |
 | `PageNumber` | `integer` | `Params` | **Required**. Page Number  |
 | `PageSize` | `integer` | `Params` | **Required**. Size of Content List |
-| `Title` | `string` | `Params` |  Part of content Title  |
+| `Title` | `string` | `Params` |  بخشی از تیتر محتوا  |
 
 
 ## - آپلود فایل
@@ -86,10 +86,13 @@
 
 
 ## - ثبت محتوا
-
 ```http
   POST  /api/v1/Partner/AddContent
 ```
+
+برای ثبت محتوا ابتدا باید فایل‌های مورد نظر را با استفاده از API آپلود، بارگزاری کرده و آدرس فایل‌های بارگزاری شده را در فیلد‌های `mediaFilePath` و `thumbnailFilePath` قرار دهید.
+
+
 | Parameter | Type     | Place | Description                |
 | :-------- | :------- | :-----| :------------------------- |
 | `X-API-KEY` | `string` | `Header` | **Required**. Your API key |
