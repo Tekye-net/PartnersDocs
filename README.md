@@ -13,6 +13,7 @@
 - X-API-KEY
 - X-Tenant
 
+
 ## - دریافت لیست محتواهای ثبت شده
 
 ```http
@@ -27,6 +28,37 @@
 | `PageSize`   | `integer` | `Params` | **Required**. Size of Content List |
 | `Title`      | `string`  | `Params` | بخشی از تیتر محتوا                 |
 
+<br/>
+
+#### - Response Type:
+
+```javascript
+Type Response = {
+  items: Item[];
+  pageNumber: number;
+  totalPages: number;
+  totalCount: number;
+  pageSize: number;
+  hasPreviousPage: boolean;
+  hasNextPage: boolean;
+}
+
+Type Item = {
+  id: number;
+  title: string;
+  status: ContentType;
+  contentType: ContentType;
+  panegyristName: string;
+  modifiedByUserId: number | null;
+  modifiedByUserFullName: string | null;
+}
+
+Type ContentType = {
+  name: string;
+  value: number;
+}
+
+```
 ## - آپلود فایل
 
 برای ذخیره فایل ها از آدرس زیر استفاده کنید
@@ -118,3 +150,28 @@
 | `placeId`           | `number`   | `Body`   | محل خلق اثر                  |
 | `tekyeId`           | `number`   | `Body`   | آیدی تکیه                    |
 | `tags`              | `string[]` | `Body`   | تگ‌های محتوا                 |
+
+<br/>
+
+#### - Response Type:
+
+```javascript
+Type Response = {
+    data:    number;  // کد محتوای ثبت شده در تکیه
+    message: string;
+    status:  Status;
+}
+
+Type Status = {
+    name:  string;
+    value: number;
+}
+
+enum StatusType {
+  Success = 1,
+  Error = 2
+}
+
+```
+
+
